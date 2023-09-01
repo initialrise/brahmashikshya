@@ -1,5 +1,6 @@
 <?php
 include("includes/header.php");
+include("includes/db.php");
 ?>
 <?php
 if(isset($_POST["submit"])){
@@ -12,7 +13,7 @@ if(isset($_POST["submit"])){
     //$row = mysqli_fetch_array($result,MYSQLI_ASSOC);
     $row = mysqli_fetch_row($result);
     if(is_null($row)){
-        echo "Invalid username/password";
+        echo "<span class='error'>Invalid username/password</span>";
     }
     else {
         echo "Login Successful";
