@@ -11,7 +11,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   box-shadow: 0px 12px 10px -5px rgba(0, 0, 0, 0.75);
-  padding: 15px;
+  padding: 5px;
   font-family: "Franklin Gothic Medium", "Arial Narrow";
   font-size: x-large;
   flex-wrap: wrap;
@@ -188,7 +188,7 @@ label {
 label {
   display: block;
   margin-bottom: 5px;
-  color: #333;
+  color: #1c085d;
 }
 
 input[type="text"],
@@ -201,9 +201,48 @@ input[type="password"] {
   border-radius: 50px;
 }
 .error {
-	display:block;
-	text-align:center;
-	color:red;
-	font-size:larger;
-	margin-top:30px;
+  display: block;
+  text-align: center;
+  color: red;
+  font-size: larger;
+  margin-top: 30px;
+}
+
+/* Course Details*/
+#course-details {
+  margin: 50px 100px;
+  /* text-align: center; */
+  /* line-height: 130%; */
+}
+#course-details > h1,
+h2,
+h3,
+button {
+  color: #1c085d;
+  margin: 10px 0px;
+}
+
+.course-img {
+  width: 1000px;
+  text-align: center;
+  margin: 20px 50px;
+}
+.courses,
+.cart-items {
+  display: flex;
+  /* justify-content: space-around; */
+  flex-wrap: wrap;
+  margin: 50px 100px;
+}
+
+.course-item,
+.cart-item {
+  padding: 20px;
+  border-radius: 20px;
+  border: 1px solid #1c085d;
+  margin: 20px 10px;
+}
+
+#checkout {
+  margin: 50px 100px;
 }

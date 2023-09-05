@@ -23,14 +23,14 @@
         <ul class="nav-links">
           <li><a class="nav-item" href="#">Home</a></li>
           <li><a class="nav-item" href="#">About</a></li>
-          <li><a class="nav-item" href="#">Courses</a></li>
-          <li><a class="nav-item" href="#">Contact</a></li>
-          <li><a class="nav-item" href="#">Contact</a></li>
+          <li><a class="nav-item" href="courses.php">Courses</a></li>
+          <li><a class="nav-item" href="my_courses.php">My Courses</a></li>
+          <li><a class="nav-item" href="checkout.php">Cart</a></li>
           <li>
             <a class="nav-item" href="#"><button class="btn">Login</button></a>
           </li>
           <li>
-            <a class="nav-item" href="#"
+            <a class="nav-item" href="register.php"
               ><button class="btn-block">Register</button></a
             >
           </li>

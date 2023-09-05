@@ -1,10 +1,11 @@
 <?php
 include("includes/header.php");
 include("includes/db.php");
+session_start();
 ?>
 <?php
 if(isset($_POST["submit"])){
-    $username = $_POST["username"];
+    $username = htmlspecialchars($_POST["username"]);
     $password = md5($_POST["password"]);
 
     $checkquery = "SELECT * FROM users where username='$username' and password='$password'";

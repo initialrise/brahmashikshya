@@ -4,10 +4,10 @@ include("includes/db.php");
 ?>
 <?php
 if(isset($_POST["submit"])){
-    $fullname = $_POST["fullname"];
-    $username = $_POST["username"];
+    $fullname = htmlspecialchars($_POST["fullname"]);
+    $username = htmlspecialchars($_POST["username"]);
     $password = md5($_POST["password"]);
-    $number = $_POST["number"];
+    $number = htmlspecialchars($_POST["number"]);
 
     $checkquery = "SELECT * FROM users where username='$username'";
     //echo $checkquery;
