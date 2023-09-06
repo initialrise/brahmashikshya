@@ -246,3 +246,32 @@ button {
 #checkout {
   margin: 50px 100px;
 }
+
+#view-video {
+  display: flex;
+}
+
+.videos-links {
+  text-align: center;
+  margin-top: 20px;
+  max-height: 620px;
+  overflow-y: auto;
+}
+.video-link {
+  /* border: 1px solid black; */
+  /* border-radius: 50px; */
+  display: flex;
+  /* justify-content: space-around; */
+  gap: 10px;
+  align-items: center;
+
+  padding: 5px 20px;
+  width: 250px;
+  margin: 0px 20px;
+}
+#video-change {
+  display: flex;
+  margin: 0px 50px;
+  gap: 50px;
+  /* justify-content: space-around; */
+}
