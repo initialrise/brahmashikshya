@@ -1,6 +1,6 @@
 <?php
 include("includes/header.php");
-include("../includes/db.php");
+include("includes/db.php");
 ?>
 <?php
 if(isset($_POST["submit"])){
@@ -62,5 +62,5 @@ if(!isset($_SESSION["username"])) {
               <hr>
 <?php } ?>
 <?php
-include("../includes/footer.php");
+include("includes/footer.php");
 ?>
