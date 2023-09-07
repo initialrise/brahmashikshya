@@ -2,7 +2,7 @@
 include("header.php");
 include("../includes/db.php");
 ?>
-    <h1 style="margin: 50px 100px">Courses We Offer</h1>
+    <h1 style="margin: 50px 100px">Choose Course to add videos</h1>
 <div class="courses">
 <?php
 $sqlquery = "SELECT * from courses";

@@ -33,13 +33,13 @@ if (!copy($filepath, $newFilepath )) {    die("Can't move file.");
 }
 unlink($filepath);
 echo "<script>alert('Uploaded Successfully');</script>";
-$view_id =$_POST["view_id"];
-$view_title =$_POST["title"];
+$order_id =$_POST["order_id"];
+$title=$_POST["title"];
 
 //db entries
-// $vidurl = $filename.".".$extension;
-// $sqlquery = "INSERT into corruption values(NULL,'$vidurl','$description',current_timestamp())";
-// mysqli_query($conn,$sqlquery);
+$vidurl = $filename.".".$extension;
+$sqlquery = "INSERT into videos VALUES(NULL,'$title','$vidurl',$id,$order_id)";
+mysqli_query($conn,$sqlquery);
 }
 ?>
  <div id="video-upload">
@@ -48,8 +48,8 @@ $view_title =$_POST["title"];
       <br />
       <form method="POST" enctype="multipart/form-data">
         <div>
-          <label for="view_id">View Id</label>
-          <input type="number" name="view_id" id="view_id" />
+          <label for="order_id">Order Id</label>
+          <input type="number" name="order_id" id="order_id" />
         </div>
         <div>
           <label for="title">Video Title</label>
