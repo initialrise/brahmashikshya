@@ -1,6 +1,7 @@
 <?php
 include("includes/header.php");
 include("../includes/db.php");
+include("verify.php");
 ?>
 <?php
 if(isset($_POST["submit"])){
@@ -9,20 +10,20 @@ if(isset($_POST["submit"])){
     $password = md5($_POST["password"]);
     $number = htmlspecialchars($_POST["number"]);
 
-    $checkquery = "SELECT * FROM users where username='$username'";
+    $checkquery = "SELECT * FROM admins where username='$username'";
     //echo $checkquery;
     $result = mysqli_query($conn,$checkquery);
     //$row = mysqli_fetch_array($result,MYSQLI_ASSOC);
     $row = mysqli_fetch_row($result);
     if(is_null($row)){
-        $insertquery = "INSERT INTO users VALUES (NULL, '$fullname', '$username', '$password', $number)";
+        $insertquery = "INSERT INTO admins VALUES (NULL, '$fullname', '$username', '$password')";
         //echo $insertquery;
         mysqli_query($conn,$insertquery);
-     echo "Registration Successfull";
+     echo "<script>alert('New Admin User Added')";
     header("Location: login.php");
     }
     else {
-        echo "Username exists";
+     echo "<script>alert('Username already exists')";
     }
    
 }
@@ -31,9 +32,9 @@ if(isset($_POST["submit"])){
 if(!isset($_SESSION["username"])) {
 ?>
  <div class="account-container">
-                  <h2 style="color:#1c0854">Register</h2>
+                  <h2 style="color:#1c0854">Add New Admin</h2>
                 <br>
-                <form action="register.php" method="POST">
+                <form method="POST">
                   <div class="form-group">
                     <label for="fullname">Full Name</label>
                     <input type="text" id="fullname" name="fullname" required>
@@ -47,15 +48,7 @@ if(!isset($_SESSION["username"])) {
                     <input type="password" id="password" name="password" required>
                   </div>
                   <div class="form-group">
-                    <label for="phone">Phone Number</label>
-                    <input type="tel" id="phone" name="number" required>
-                  </div>
-                  <div class="form-group">
                     <button type="submit" class="btn-block" name="submit">Signup</button>
-                  </div>
-                  <div class="form-group">
-                    <br>
-                    <p>Already have an account? <a href="login.php"><b>Login</b></a></p>
                   </div>
                 </form>
               </div>

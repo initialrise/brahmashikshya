@@ -1,6 +1,7 @@
 <?php
 include("includes/header.php");
 include("includes/db.php");
+include("verify.php");
 ?>
 <?php
 if(isset($_POST["submit"])){

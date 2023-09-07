@@ -1,6 +1,7 @@
 <?php
 include("header.php");
 include("../includes/db.php");
+include("verify.php");
 ?>
     <h1 style="margin: 50px 100px">Choose Course to add videos</h1>
 <div class="courses">

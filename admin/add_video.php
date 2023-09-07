@@ -1,6 +1,7 @@
 <?php
 include("header.php");
 include("../includes/db.php");
+include("verify.php");
 ?>
 <?php
 $id = (int)($_GET["id"]);

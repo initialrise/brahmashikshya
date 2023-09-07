@@ -1,37 +1,29 @@
 <?php
 include("header.php");
+include("../includes/db.php");
 ?>
 <?php
 if(isset($_POST["submit"])){
     $username = $_POST["username"];
-    $password = $_POST["password"];
-    //$password = md5($_POST["password"]);
+    $password = md5($_POST["password"]);
 
-	/*
-    $checkquery = "SELECT * FROM users where username='$username' and password='$password'";
-    echo $checkquery;
+    $checkquery = "SELECT * FROM admins where username='$username' and password='$password'";
     $result = mysqli_query($conn,$checkquery);
-    $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
-    $row = mysqli_fetch_row($result);
-    if(is_null($row)){
+    $count = mysqli_num_rows($result);
+    if($count>0){
+        echo "Login Successful";
+        $_SESSION["admin"] = $username;
+        header("Location: dashboard.php");
+    }
+    else {
+
         echo "<span class='error'>Invalid username/password</span>";
     }
-	 */
-	if($username=="admin" && $password == "rabindra")
-	{
-        echo "Login Successful";
-        $_SESSION["username"] = $username;
-        header("Location: dashboard.php");
 	}
-	else
-	{echo "<span class='error'>Invalid username/password</span>";}
-  
-   
-}
 ?>
 
 <?php
-if(!isset($_SESSION["username"])) {
+if(!isset($_SESSION["admin"])) {
 ?>
   <div class="account-container">
                   <h2 style="color:#1c0854">Admin Panel</h2>

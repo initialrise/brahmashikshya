@@ -1,6 +1,7 @@
 <?php
 include("header.php");
 include("../includes/db.php");
+include("verify.php");
 if(isset($_POST["submit"])){
     $title = $_POST["title"];
     $description = $_POST["description"];
