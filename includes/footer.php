@@ -46,5 +46,7 @@
       </section>
       <section>Copyright@BrahmaShikshya</section>
     </footer>
+    <script src="js/updatelink.js">
+      </script>
   </body>
 </html>

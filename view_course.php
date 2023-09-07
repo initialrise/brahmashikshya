@@ -1,6 +1,7 @@
 <?php
 include("includes/header.php");
 include("includes/db.php");
+include("includes/getuid.php");
 ?>
 <?php
 $id = (int)($_GET["id"]);
@@ -18,7 +19,14 @@ $result = mysqli_query($conn,$sqlquery);
     }
 
 ?>
-
+<?php
+$query = "SELECT * from enrollments where user_id=$uid and course_id=$id";
+$res = mysqli_query($conn,$query);
+$enrolled = false;
+if(mysqli_num_rows($res)>0){
+      $enrolled = true;
+}
+?>
 <div id="course-details">
       <h1><?php echo $course_title; ?></h1>
       <h2>Course Description</h2>
@@ -36,6 +44,9 @@ $result = mysqli_query($conn,$sqlquery);
       >
       <h1>Rs <?php echo $course_price; ?></h1>
       <?php
+      if($enrolled)
+      echo "<a href='watch_course.php?id=$course_id'><button class='btn-block'>Watch Course</button></a>";
+      else
       echo "<a href='checkout.php?id=$course_id&action=add'><button class='btn-block'>Add to Cart</button></a>";
       ?>
     </div>

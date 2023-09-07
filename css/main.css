@@ -256,6 +256,7 @@ button {
   margin-top: 20px;
   max-height: 620px;
   overflow-y: auto;
+  /* width: 100%; */
 }
 .video-link {
   /* border: 1px solid black; */
@@ -266,7 +267,8 @@ button {
   align-items: center;
 
   padding: 5px 20px;
-  width: 250px;
+  /* width: 250px; */
+  width: 300px;
   margin: 0px 20px;
 }
 #video-change {

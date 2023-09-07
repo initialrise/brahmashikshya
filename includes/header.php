@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -21,19 +24,28 @@
           <span>BrahmaShikshya</span>
         </div>
         <ul class="nav-links">
-          <li><a class="nav-item" href="#">Home</a></li>
+          <li><a class="nav-item" href="index.php">Home</a></li>
           <li><a class="nav-item" href="#">About</a></li>
           <li><a class="nav-item" href="courses.php">Courses</a></li>
           <li><a class="nav-item" href="my_courses.php">My Courses</a></li>
           <li><a class="nav-item" href="checkout.php">Cart</a></li>
+            <?php
+            if(!isset($_SESSION["username"])){ ?>
           <li>
-            <a class="nav-item" href="#"><button class="btn">Login</button></a>
+            <a class="nav-item" href="login.php"><button class="btn">Login</button></a>
           </li>
           <li>
             <a class="nav-item" href="register.php"
               ><button class="btn-block">Register</button></a
             >
           </li>
+          <?php } else {?>
+          <li>
+            <a class="nav-item" href="logout.php"
+              ><button class="btn-block">Logout</button></a
+            >
+            </li>
+            <?php } ?>
         </ul>
       </nav>
     </header>

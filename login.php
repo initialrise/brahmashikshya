@@ -1,7 +1,6 @@
 <?php
 include("includes/header.php");
 include("includes/db.php");
-session_start();
 ?>
 <?php
 if(isset($_POST["submit"])){
@@ -19,7 +18,7 @@ if(isset($_POST["submit"])){
     else {
         echo "Login Successful";
         $_SESSION["username"] = $username;
-        header("Location: index.php");
+        header("Location: courses.php");
 }
   
    
