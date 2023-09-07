@@ -1,5 +1,5 @@
 <?php
-include("../includes/header.php");
+include("header.php");
 ?>
 <?php
 if(isset($_POST["submit"])){
@@ -34,7 +34,7 @@ if(isset($_POST["submit"])){
 if(!isset($_SESSION["username"])) {
 ?>
   <div class="account-container">
-                  <h2 style="color:#1c0854">Login</h2>
+                  <h2 style="color:#1c0854">Admin Panel</h2>
                   <br>
     <form method="POST" action="login.php">
                     <div>
