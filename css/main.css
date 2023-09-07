@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Montserrat:wght@700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Kablammo&family=Limelight&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Montserrat:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kablammo&family=Limelight&display=swap"); */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -173,7 +173,9 @@ label {
   margin-bottom: 5px;
   color: #333;
 }
-.account-container {
+.account-container,
+#video-upload,
+#course-upload {
   width: 500px;
   margin: 0 auto;
   padding: 20px;
@@ -193,12 +195,18 @@ label {
 
 input[type="text"],
 input[type="tel"],
-input[type="password"] {
+input[type="number"],
+input[type="password"],
+textarea {
   margin-bottom: 25px;
   width: 100%;
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 50px;
+}
+
+input[type="file"] {
+  display: none;
 }
 .error {
   display: block;
@@ -276,4 +284,21 @@ button {
   margin: 0px 50px;
   gap: 50px;
   /* justify-content: space-around; */
+}
+#video-label {
+  border: 1px dashed #1c085d;
+  height: 100px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 25px;
+}
+#course-upload {
+  width: 1200px;
+}
+textarea {
+  width: 100%;
+  height: 185px;
+  border-radius: 8px;
 }

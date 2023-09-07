@@ -1,7 +1,6 @@
 <?php
 include("includes/header.php");
 include("includes/db.php");
-include("includes/uid.php");
 if(!isset($_SESSION["username"])){
   header("Location: login.php");
 }
