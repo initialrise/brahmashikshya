@@ -1,5 +1,5 @@
 <?php
-include("includes/header.php");
+include("header.php");
 include("../includes/db.php");
 include("verify.php");
 ?>
@@ -28,9 +28,6 @@ if(isset($_POST["submit"])){
    
 }
 ?>
-<?php
-if(!isset($_SESSION["username"])) {
-?>
  <div class="account-container">
                   <h2 style="color:#1c0854">Add New Admin</h2>
                 <br>
@@ -53,7 +50,6 @@ if(!isset($_SESSION["username"])) {
                 </form>
               </div>
               <hr>
-<?php } ?>
 <?php
 include("../includes/footer.php");
 ?>

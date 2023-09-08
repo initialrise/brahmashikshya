@@ -26,6 +26,9 @@ $data =[
         //insert courses into enrollments
         $query = "INSERT INTO enrollments (user_id, course_id) SELECT carts.user_id, carts.course_id FROM carts WHERE carts.user_id = $uid";
         mysqli_query($conn,$query);
+        //insert into payments
+        $query="INSERT into payments VALUES('$oid','$amt',$uid)";
+        mysqli_query($conn,$query);
         //delete cart
         $query = "DELETE FROM carts where user_id=$uid";
         mysqli_query($conn,$query);

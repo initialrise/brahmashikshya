@@ -30,7 +30,7 @@ session_start();
           <li><a class="nav-item" href="courses.php">Add Videos</a></li>
           <li><a class="nav-item" href="add_user.php">Add Users</a></li>
             <?php
-            if(!isset($_SESSION["username"])){ ?>
+            if(!isset($_SESSION["admin"])){ ?>
           <li>
             <a class="nav-item" href="login.php"><button class="btn">Login</button></a>
           </li>

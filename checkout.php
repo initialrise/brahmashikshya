@@ -61,6 +61,9 @@ $result = mysqli_query($conn,$sqlquery);
     $total = $net_total+100;
     $time = time();
     $payment_id = md5($uid."-".$time);
+    $domain = $_SERVER['SERVER_NAME'];
+    $success_url = "https://".$domain."/ecommerce/esewa.php?q=su";
+    $failure_url = "https://".$domain."/ecommerce/esewa.php?q=fu";
 ?>
         <div id="checkout">
         <h2>Total</h2>
@@ -83,8 +86,8 @@ $result = mysqli_query($conn,$sqlquery);
             <input value="0" name="pdc" type="hidden">
             <input value="EPAYTEST" name="scd" type="hidden">
             <input value=<?php echo $payment_id; ?> name="pid" type="hidden">
-            <input value="http://localhost/ecommerce/esewa.php?q=su" type="hidden" name="su">
-            <input value="http://localhost/ecommerce/esewa.php?q=fu" type="hidden" name="fu">
+            <input value=<?php echo $success_url; ?> type="hidden" name="su">
+            <input value=<?php echo $failure_url;?> type="hidden" name="fu">
     <!-- <input value="Submit" type="submit"> -->
         <button class="btn-block">PAY</button>
     </form>
