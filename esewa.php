@@ -3,11 +3,12 @@ session_start();
 include("includes/db.php");
 include("includes/getuid.php");
 $status = $_GET["q"];
+
+if($status=="su"){
+$url = "https://uat.esewa.com.np/epay/transrec";
 $oid = $_GET["oid"];
 $amt = $_GET["amt"];
 $refId = $_GET["refId"];
-if($status=="su"){
-$url = "https://uat.esewa.com.np/epay/transrec";
 $data =[
     'amt'=> $amt,
     'rid'=> $refId, 
