@@ -5,10 +5,9 @@
         <p>
           BrahmaShikshya is established to support students who are passionate
           to pursue career in medical, engineering and related academic fields,
-          by mentoring (coaching) them for the entrance exam preparation. Lorem
-          ipsum dolor sit amet consectetur adipisicing elit. Amet, culpa! Lorem
-          ipsum, dolor sit amet consectetur adipisicing elit. Vitae tempore quas
-          libero?
+          by mentoring (coaching) them for the entrance exam preparation.Empower your 
+          learning journey with our carefully crafted resources, designed to enhance your 
+          conceptual grasp and hone your adept problem-solving abilities 
         </p>
       </section>
       <section class="footer-content">

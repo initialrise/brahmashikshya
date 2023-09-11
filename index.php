@@ -38,19 +38,19 @@
           <h5>Happy Students</h5>
         </div>
         <div class="stat-card">
-          <h1>12K</h1>
+          <h1>1K</h1>
           <h5>Video Lectures</h5>
         </div>
         <div class="stat-card">
-          <h1>12K</h1>
+          <h1>100</h1>
           <h5>Mock Exams</h5>
         </div>
         <div class="stat-card">
-          <h1>12K</h1>
+          <h1>22</h1>
           <h5>Nepal Toppers</h5>
         </div>
         <div class="stat-card">
-          <h1>12K</h1>
+          <h1>70</h1>
           <h5>Faculty Teachers</h5>
         </div>
       </div>
@@ -101,13 +101,9 @@
       <div class="service">
         <img src="img/service1.svg" />
         <div>
-          <h3>Structured Study Material</h3>
+          <h3>Video Lectures</h3>
           <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi,
-            aliquam hic ad natus quasi cupiditate nobis. Repudiandae ullam vel
-            totam cumque iste provident quo repellendus temporibus architecto
-            distinctio culpa fuga voluptates, ratione magni hic maiores, quis
-            fugit impedit, optio sapiente?
+            Learning is an important step for achieving dreams in a student’s journey. We encourage the student to explore the concept in depth instead of memorizing. The video lectures help us in learning the needs of the students and motivates the students to be creative and be passionate learners.
           </p>
         </div>
       </div>
@@ -116,11 +112,7 @@
         <div>
           <h3>Structured Study Material</h3>
           <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi,
-            aliquam hic ad natus quasi cupiditate nobis. Repudiandae ullam vel
-            totam cumque iste provident quo repellendus temporibus architecto
-            distinctio culpa fuga voluptates, ratione magni hic maiores, quis
-            fugit impedit, optio sapiente?
+           Explore the art of conceptual understanding with our structured materials, accompanied by intelligent question tackling and problem-solving skills, to unlock a deeper level of knowledge. Empower your learning journey with our carefully crafted resources, designed to enhance your conceptual grasp and hone your adept problem-solving abilities 
           </p>
         </div>
       </div>
@@ -132,10 +124,8 @@
         <p>
           BrahmaShikshya is established to support students who are passionate
           to pursue career in medical, engineering and related academic fields,
-          by mentoring (coaching) them for the entrance exam preparation. Lorem
-          ipsum dolor sit amet consectetur adipisicing elit. Amet, culpa! Lorem
-          ipsum, dolor sit amet consectetur adipisicing elit. Vitae tempore quas
-          libero?
+          by mentoring (coaching) them for the entrance exam preparation.Empower your learning journey with our carefully crafted resources, designed to enhance your 
+          conceptual grasp and hone your adept problem-solving abilities  
         </p>
       </section>
       <section class="footer-content">
