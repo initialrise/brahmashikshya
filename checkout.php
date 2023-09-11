@@ -15,8 +15,12 @@ if(isset($_GET["id"]) && isset($_GET["action"]))
     $uname = $_SESSION["username"];
   
     if($action=="add"){
+        $check_already = "SELECT * from carts where user_id=$uid and course_id=$id";
+        $checkoutput = mysqli_query($conn,$check_already);
+        if(mysqli_num_rows($checkoutput)==0){
         $query = "INSERT into carts VALUES(NULL,$uid,$id)";
         mysqli_query($conn,$query);
+        }
         header("Location: checkout.php");
     }
     else if($action=="del"){
@@ -58,17 +62,23 @@ $result = mysqli_query($conn,$sqlquery);
 ?>
 </div>
 <?php
-    $total = $net_total+100;
+    $total = $net_total;
+    $tax =0;
+    if($total>0){
+        $tax = 100;
+        $total = $net_total+$tax;
+    }
     $time = time();
     $payment_id = md5($uid."-".$time);
     $domain = $_SERVER['SERVER_NAME'];
     $success_url = "https://".$domain."/ecommerce/esewa.php?q=su";
     $failure_url = "https://".$domain."/ecommerce/esewa.php?q=fu";
+    
 ?>
         <div id="checkout">
         <h2>Total</h2>
         <hr />
-        <h3>Tax Charge: Rs 100</h3>
+        <h3>Tax Charge: Rs <?php echo $tax; ?></h3>
         <hr />
         <h3>Sub Total: Rs <?php echo $net_total; ?></h3>
         <hr />
