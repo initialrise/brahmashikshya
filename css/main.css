@@ -326,3 +326,13 @@ textarea {
 .stat > h3 {
   color: white;
 }
+.about-page {
+  margin: 50px;
+  padding: 50px 100px;
+  line-height: 130%;
+}
+
+.about-page > h1 {
+  color: #1c085d;
+  margin-bottom: 50px;
+}

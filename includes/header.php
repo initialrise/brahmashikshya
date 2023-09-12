@@ -25,7 +25,7 @@ session_start();
         </div>
         <ul class="nav-links">
           <li><a class="nav-item" href="index.php">Home</a></li>
-          <li><a class="nav-item" href="#">About</a></li>
+          <li><a class="nav-item" href="about.php">About</a></li>
           <li><a class="nav-item" href="courses.php">Courses</a></li>
           <li><a class="nav-item" href="my_courses.php">My Courses</a></li>
           <li><a class="nav-item" href="checkout.php">Cart</a></li>
